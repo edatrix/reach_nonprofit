@@ -4,11 +4,14 @@
 
 body#home {
   background-color: #ccc;
+  margin-bottom: 50px;
 }
 
 .carousel {
   height: 400px;
   margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
   img {
     max-height: 400px;
     margin: auto;
@@ -16,8 +19,12 @@ body#home {
 }
 
 .marketing-box {
-  border: 2px solid;
   border-radius: 10px;
   padding: 10px;
 }
 
+#intro {
+  overflow: hidden;
+  margin: 20px 0;
+  border-bottom: 1px dashed;
+}
