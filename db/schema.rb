@@ -11,9 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160324032806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "carousel_images", force: true do |t|
+    t.integer  "index_id"
+    t.text     "photo"
+    t.string   "caption"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "detail_boxes", force: true do |t|
+    t.integer  "index_id"
+    t.string   "title"
+    t.text     "body"
+    t.integer  "sort_order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "highlight_boxes", force: true do |t|
+    t.integer  "index_id"
+    t.string   "title"
+    t.text     "body"
+    t.integer  "sort_order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "indices", force: true do |t|
+    t.string   "welcome_title"
+    t.text     "welcome_body"
+    t.string   "contact_phone"
+    t.string   "contact_email"
+    t.string   "contact_other"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
